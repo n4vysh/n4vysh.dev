@@ -1,0 +1,10 @@
+app = "n4vysh-onion-service"
+primary_region = "nrt"
+
+[http_service]
+  force_https = false
+  auto_stop_machines = false
+  auto_start_machines = true
+
+[env]
+  ONION_SERVICE_DOMAIN = "xdd456duxxh47o3uxu2ql3lj76i6e7paofm7shfts2p6gavqbvngfpqd.onion"

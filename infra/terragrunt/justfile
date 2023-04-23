@@ -1,0 +1,57 @@
+name := "website"
+user := "n4vysh"
+tld := "dev"
+domain := user + "." + tld
+region := "ap-northeast-1"
+bucket := name + ".tfstate." + domain
+table := name + "-tfstate-lock"
+env := `../../scripts/get-env.bash 2>/dev/null || true`
+dir := env_var_or_default('DIR', "")
+opts := if dir != "" { "--terragrunt-working-dir=environments/" + env + "/" + dir + " --terragrunt-ignore-external-dependencies" } else { if env != "" { "--terragrunt-working-dir=environments/" + env + "/" } else { "" } }
+
+default:
+
+# Run terragrunt
+run +cmd:
+    terragrunt {{ cmd }} {{ opts }}
+
+# Run terragrunt in each sub directory
+run-all +cmd:
+    just run run-all {{ cmd }}
+
+# Initialize Terraform working directory and create remote state
+#
+# Terraform is an administrative tool that manages your infrastructure, and so ideally the infrastructure that is used by Terraform should exist outside of the infrastructure that Terraform manages.
+# This can be achieved by creating a separate administrative AWS account which contains the user accounts used by human operators and any infrastructure and tools used to manage the the other accounts.
+# TODO: create aws account for terraform s3 backend
+# https://www.terraform.io/docs/language/settings/backends/s3.html
+#
+# Terragrunt will automatically create the configured DynamoDB tables and S3 buckets for storing remote state if they do not already exist.
+
+# https://terragrunt.gruntwork.io/docs/features/aws-auth/#aws-iam-policies
+init:
+    just run-all init --terragrunt-non-interactive
+
+# Creates an execution plan
+plan:
+    just run-all plan
+
+# Executes the planned actions
+apply:
+    just run-all apply --terragrunt-non-interactive -auto-approve
+
+# Destroy remote objects
+destroy:
+    just run-all destroy
+
+# Render terragrunt config for debug
+render:
+    (cd "{{ invocation_directory() }}" && terragrunt render-json --terragrunt-json-out /dev/stdout | jq -r)
+
+# Check terragrunt config
+check-fmt:
+    terragrunt hclfmt --terragrunt-check
+
+# Format terragrunt config
+fmt:
+    terragrunt hclfmt

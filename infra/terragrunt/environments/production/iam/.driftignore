@@ -1,0 +1,16 @@
+*
+!aws_iam_policy
+!aws_iam_policy_attachment
+!aws_iam_role
+!aws_iam_role_policy
+!aws_iam_role_policy_attachment
+aws_iam_role.OrganizationAccountAccessRole
+aws_iam_role.*-website-blue-eks-node-group-*
+aws_iam_role.*-website-cluster-*
+aws_iam_role.*-website-green-eks-node-group-*
+aws_iam_role_policy
+aws_iam_policy_attachment.*-website-cluster-*
+aws_iam_policy_attachment.*-website-blue-eks-node-group-*
+aws_iam_policy_attachment.*-website-green-eks-node-group-*
+aws_iam_policy_attachment.AWSServiceRoleFor*
+aws_iam_role_policy.OrganizationAccountAccessRole:AdministratorAccess

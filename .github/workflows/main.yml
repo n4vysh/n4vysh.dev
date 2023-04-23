@@ -1,0 +1,53 @@
+---
+name: main
+"on": push
+jobs:
+  install-packages:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install packages
+        uses: ./.github/actions/install-packages
+  lefthook:
+    runs-on: ubuntu-20.04
+    needs:
+      - install-packages
+    strategy:
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+      - name: Install packages
+        uses: ./.github/actions/install-packages
+      - name: Run lefthook
+        run: |
+          eval "$(direnv export bash)"
+          just test
+  deploy-prd:
+    # yamllint disable-line rule:line-length
+    uses: n4vysh/n4vysh.dev/.github/workflows/reusable-terragrunt-workflow.yml@main
+    with:
+      environment: production
+      url: https://n4vysh.dev
+      # yamllint disable-line rule:line-length
+      role-to-assume: arn:aws:iam::804137327620:role/prd-website-github-actions
+    needs:
+      - install-packages
+      - lefthook
+    secrets:
+      PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
+  deploy-stg:
+    # yamllint disable-line rule:line-length
+    uses: n4vysh/n4vysh.dev/.github/workflows/reusable-terragrunt-workflow.yml@main
+    with:
+      environment: staging
+      url: https://stg.n4vysh.dev
+      role-to-assume: dummy-arn
+    needs:
+      - install-packages
+      - lefthook
+    secrets:
+      PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}

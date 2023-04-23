@@ -1,0 +1,12 @@
+#!/bin/bash
+
+dir=$(
+  cd "$(dirname "$0")/../" || exit
+  pwd
+)
+
+# https://github.com/conventional-changelog/commitlint/issues/613
+"$dir/misc/node_modules/.bin/commitlint" \
+  -g "$dir/.commitlintrc.yaml" \
+  -x "$dir/misc/node_modules/@commitlint/config-conventional" \
+  "$@"

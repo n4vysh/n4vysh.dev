@@ -1,0 +1,43 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.icon {
+  text-align: center;
+}
+
+.icon img {
+  border: 0.15rem solid #2196f3;
+  border-width: 2px;
+  border-radius: 50%;
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.links ul {
+  margin: 0;
+  line-height: 1.5;
+  color: #333;
+  text-align: center;
+}
+
+.links li {
+  display: inline;
+}
+
+.links li:not(:last-child)::after {
+  color: #e0e0e0;
+  content: "·";
+}
+
+.links a {
+  margin: 0 9px;
+}

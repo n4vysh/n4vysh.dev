@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "config:base",
+    ":automergePatch",
+    "schedule:quarterly",
+    "group:allNonMajor"
+  ],
+  "timezone": "Asia/Tokyo"
+}

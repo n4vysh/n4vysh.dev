@@ -1,0 +1,17 @@
+name := 'n4vysh/onion-service'
+
+dev: build
+    docker run --rm \
+        --name n4vysh-onion-service \
+        -e ONION_SERVICE_DOMAIN=127.0.0.1 \
+        -t {{ name }}
+
+build:
+    docker build -t {{ name }} --progress=plain .
+
+url:
+    docker exec -it n4vysh-onion-service cat /var/lib/tor/website/hostname | \
+        sed -e 's/\r//g' -e 's|^|http://|g'
+
+deploy:
+    flyctl deploy

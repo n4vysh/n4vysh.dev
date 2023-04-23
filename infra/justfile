@@ -1,0 +1,8 @@
+init:
+    ./scripts/init.bash
+
+install:
+    ./scripts/install-packages.bash
+
+deploy:
+    ./scripts/deploy.bash

@@ -1,0 +1,6 @@
+.pnpm-debug.log
+.crates.toml
+.crates2.json
+bin/shellharden
+lefthook-local.yml
+frontend/.vscode

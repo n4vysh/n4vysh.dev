@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# shellcheck disable=SC2016
+with-contenv \
+  s6-setuidgid tor \
+  sh -c '
+    [ -n "$ONION_SERVICE_SECRET_KEY" ] &&
+      printf "%s" "$ONION_SERVICE_SECRET_KEY" |
+        base64 -d >/var/lib/tor/website/hs_ed25519_secret_key
+  '
+
+dockerize -wait unix:///var/lib/nginx/website.sock
+
+s6-setuidgid tor env HOME=/home/tor/ tor

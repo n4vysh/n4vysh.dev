@@ -39,9 +39,11 @@ https://n4vysh.dev | http://xdd456duxxh47o3uxu2ql3lj76i6e7paofm7shfts2p6gavqbvng
 
 ### Clearnet
 
+- Score 100% on [Google PageSpeed Insights][pagespeed-insights-link]
 - Support [Onion-Location][onion-location-link] header
 - Deploy with [Vercel][vercel-link]
 
+[pagespeed-insights-link]: https://pagespeed.web.dev/analysis/https-n4vysh-dev/kybbgkr02d
 [onion-location-link]: https://community.torproject.org/onion-services/advanced/onion-location/
 [vercel-link]: https://vercel.com/
 

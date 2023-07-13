@@ -1,4 +1,4 @@
-FROM node:20.0.0-alpine3.17 AS build-env
+FROM node:20.4.0-alpine3.17 AS build-env
 
 WORKDIR /home/node/
 COPY --chown=node:node package.json ./
@@ -14,7 +14,7 @@ COPY --chown=node:node .eslintrc.json .
 
 RUN pnpm build
 
-FROM nginx:1.24.0-alpine-slim
+FROM nginx:1.25.1-alpine-slim
 
 ARG S6_OVERLAY_VERSION=3.1.4.1
 

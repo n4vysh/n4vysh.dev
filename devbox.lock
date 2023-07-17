@@ -1,0 +1,77 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "atool@0.39.0": {
+      "last_modified": "2023-05-07T06:59:10Z",
+      "resolved": "github:NixOS/nixpkgs/eb751d65225ec53de9cf3d88acbf08d275882389#atool",
+      "source": "devbox-search",
+      "version": "0.39.0"
+    },
+    "bash@5.1-p16": {
+      "last_modified": "2023-01-13T10:34:48Z",
+      "resolved": "github:NixOS/nixpkgs/37b97ae3dd714de9a17923d004a2c5b5543dfa6d#bash",
+      "source": "devbox-search",
+      "version": "5.1-p16"
+    },
+    "codespell@2.1.0": {
+      "last_modified": "2022-08-20T23:29:36Z",
+      "resolved": "github:NixOS/nixpkgs/07d2cffa61fbb4bd9dc2e0cb0bb4fe146d420bd6#codespell",
+      "source": "devbox-search",
+      "version": "2.1.0"
+    },
+    "coreutils@9.1": {
+      "last_modified": "2023-05-07T06:59:10Z",
+      "resolved": "github:NixOS/nixpkgs/eb751d65225ec53de9cf3d88acbf08d275882389#coreutils",
+      "source": "devbox-search",
+      "version": "9.1"
+    },
+    "findutils@4.9.0": {
+      "last_modified": "2023-05-07T06:59:10Z",
+      "resolved": "github:NixOS/nixpkgs/eb751d65225ec53de9cf3d88acbf08d275882389#findutils",
+      "source": "devbox-search",
+      "version": "4.9.0"
+    },
+    "gawk@5.1.1": {
+      "last_modified": "2023-01-13T10:34:48Z",
+      "resolved": "github:NixOS/nixpkgs/37b97ae3dd714de9a17923d004a2c5b5543dfa6d#gawk",
+      "source": "devbox-search",
+      "version": "5.1.1"
+    },
+    "gnugrep@3.7": {
+      "last_modified": "2023-05-07T06:59:10Z",
+      "resolved": "github:NixOS/nixpkgs/eb751d65225ec53de9cf3d88acbf08d275882389#gnugrep",
+      "source": "devbox-search",
+      "version": "3.7"
+    },
+    "gnused@4.8": {
+      "last_modified": "2023-01-13T10:34:48Z",
+      "resolved": "github:NixOS/nixpkgs/37b97ae3dd714de9a17923d004a2c5b5543dfa6d#gnused",
+      "source": "devbox-search",
+      "version": "4.8"
+    },
+    "parallel@20220322": {
+      "last_modified": "2023-01-20T17:44:10Z",
+      "resolved": "github:NixOS/nixpkgs/cfb43ad7b941d9c3606fb35d91228da7ebddbfc5#parallel",
+      "source": "devbox-search",
+      "version": "20220322"
+    },
+    "shellharden@4.1.2": {
+      "last_modified": "2021-11-07T03:05:56Z",
+      "resolved": "github:NixOS/nixpkgs/81d15682625635d93ba66def75fd13fd16c0515b#shellharden",
+      "source": "devbox-search",
+      "version": "4.1.2"
+    },
+    "taplo@0.8.0": {
+      "last_modified": "2023-05-07T06:59:10Z",
+      "resolved": "github:NixOS/nixpkgs/eb751d65225ec53de9cf3d88acbf08d275882389#taplo",
+      "source": "devbox-search",
+      "version": "0.8.0"
+    },
+    "yamllint@1.26.3": {
+      "last_modified": "2022-06-18T15:44:17Z",
+      "resolved": "github:NixOS/nixpkgs/e0a42267f73ea52adc061a64650fddc59906fc99#yamllint",
+      "source": "devbox-search",
+      "version": "1.26.3"
+    }
+  }
+}

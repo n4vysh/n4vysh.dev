@@ -13,7 +13,7 @@ ENV=$("$dir"/scripts/get-env.bash 2>/dev/null || true)
 if ! [[ -v AWS_ACCESS_KEY_ID && -v AWS_SECRET_ACCESS_KEY && -v AWS_SESSION_TOKEN ]] &&
   [[ $ENV =~ ^(common|staging|production)$ ]] &&
   [[ $CI != true ]]; then
-  aws-vault exec "n4vysh/$ENV" -- asdf exec terragrunt "${@}"
+  aws-vault exec "n4vysh/$ENV" -- rtx exec terragrunt -- terragrunt "${@}"
 else
-  asdf exec terragrunt "${@}"
+  rtx exec terragrunt -- terragrunt "${@}"
 fi

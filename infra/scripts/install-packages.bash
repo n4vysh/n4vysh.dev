@@ -6,5 +6,5 @@ dir=$(
 )
 cd "$dir" || exit
 
-"$dir/scripts/init/asdf-direnv.bash" "$dir/infra"
-"$dir/scripts/install/asdf-packages.bash" "$dir/infra"
+"$dir/scripts/install/rtx-direnv.bash" "$dir/infra"
+"$dir/scripts/install/rtx-packages.bash" "$dir/infra"

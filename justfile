@@ -5,10 +5,6 @@ test:
     lefthook run pre-commit
     lefthook run commit-msg
 
-# Update package versions
-update:
-    ./scripts/update-packages.bash
-
 # List available commands
 list:
     ./scripts/list.bash
@@ -22,7 +18,7 @@ fmt-yaml *target:
 
 # format toml files with taplo
 fmt-toml *target:
-    ./scripts/taplo-format.bash {{ target }}
+    taplo format {{ target }}
 
 # format markdown files with markdownlint
 fmt-md *target:

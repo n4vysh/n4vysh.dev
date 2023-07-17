@@ -7,7 +7,7 @@ skillsets and expertise.
 
 Clearnet           | Darknet
 :-                 | :-
-https://n4vysh.dev | http://xdd456duxxh47o3uxu2ql3lj76i6e7paofm7shfts2p6gavqbvngfpqd.onion
+<https://n4vysh.dev> | <http://xdd456duxxh47o3uxu2ql3lj76i6e7paofm7shfts2p6gavqbvngfpqd.onion>
 
 ## Features
 
@@ -50,7 +50,8 @@ https://n4vysh.dev | http://xdd456duxxh47o3uxu2ql3lj76i6e7paofm7shfts2p6gavqbvng
 ### Darknet
 
 - Run [Nginx][nginx-link] and [tor][tor-link] as unprivileged user
-- Run [Onion Services][onion-service-link] over [Unix sockets][unix-socket-link] and [s6-overlay][s6-overlay-link]
+- Run [Onion Services][onion-service-link] over [Unix sockets][unix-socket-link]
+  and [s6-overlay][s6-overlay-link]
 - Deploy with [Fly.io][flyio-link]
 
 [nginx-link]: https://www.nginx.com/
@@ -66,32 +67,16 @@ Need Linux (64-bit) machine and following tools.
 
 | Name                                  | Description                   | Version     |
 | :------------------------------------ | :---------------------------- | :---------- |
-| [Bash][bash-link]                     | Unix shell                    | ~> 5.1.16   |
-| [Grep][grep-link]                     | Line-oriented search tool     | >= 3.7      |
-| [sed][sed-link]                       | Stream editor                 | >= 4.8      |
-| [Gawk][gawk-link]                     | Pattern scanning tool         | ~> 5.1.1    |
-| [Coreutils][coreutils-link]           | Basic utilities               | >= 9.1      |
-| [Findutils][findutils-link]           | Directory searching utilities | ~> 4.9.0    |
-| [GNU parallel][gnu-parallel-link]     | Parallel job executor         | >= 20220322 |
-| [asdf][asdf-link]                     | Version manager               | ~> 0.9.0    |
-| [asdf-direnv][asdf-direnv-link]       | direnv plugin for asdf        | ~> 0.3.0    |
+| [rtx][rtx-link]                       | Version manager               | ~> 1.34.1   |
+| [devbox][devbox-link]                 | Version manager               | ~> 0.5.7    |
 | [Docker][docker-link]                 | Virtualization software       | ~> 20.10.14 |
-| [atool][atool-link]                   | File archive manager          | ~> 0.39.0   |
 
 Suggest use Editor or IDE that supports [EditorConfig][editorconfig-link],
 [LSP][lsp-link], formatter, and linter. For windows or macos user, suggest use
 [WSL][wsl-link] or [Lima][lima-link]. Probably it works.
 
-[bash-link]: https://www.gnu.org/software/bash/
-[grep-link]: https://www.gnu.org/software/grep/
-[sed-link]: https://www.gnu.org/software/sed/
-[gawk-link]: https://www.gnu.org/software/gawk/
-[coreutils-link]: https://www.gnu.org/software/coreutils/
-[findutils-link]: https://www.gnu.org/software/findutils/
-[gnu-parallel-link]: https://www.gnu.org/software/parallel/
-[asdf-link]: https://asdf-vm.com/
-[asdf-direnv-link]: https://github.com/asdf-community/asdf-direnv/blob/4900445811e634702b3bb069cd9b8a4b717ea925/README.md#setup
-[atool-link]: https://www.nongnu.org/atool/
+[rtx-link]: https://github.com/jdxcode/rtx
+[devbox-link]: https://www.jetpack.io/devbox
 [wsl-link]: https://docs.microsoft.com/en-us/windows/wsl/
 [lima-link]: https://github.com/lima-vm/lima
 [editorconfig-link]: https://editorconfig.org/
@@ -104,7 +89,7 @@ Preview and edit the website on local machine as follows:
 1. [Clone this repository on local machine][gh-clone-link]
 2. Go to the project root directory of this repository in terminal
 3. Run [`./scripts/install-packages.bash`][script-link] to install packages via
-   asdf
+   rtx and devbox
 
 frontend - clearnet:
 
@@ -114,7 +99,8 @@ frontend - clearnet:
 4. After done with the preview, press Ctrl-C in terminal to stop the server
 
 While the preview is running, edit tsx and css files and automatically rebuild
-them. Suggest IDE or editor setup with [TypeScript Language Server][tsserver-link] and [eslint][eslint-link] installed by [pnpm][pnpm-link].
+them. Suggest IDE or editor setup with [TypeScript Language Server][tsserver-link]
+and [eslint][eslint-link] installed by [pnpm][pnpm-link].
 
 frontend - darknet:
 
@@ -126,7 +112,7 @@ frontend - darknet:
 infra:
 
 Suggest IDE or editor setup with [terraform-ls][terraform-ls-link] and
-[yamllint][yamllint-link] installed by asdf.
+[yamllint][yamllint-link] installed by rtx.
 
 ---
 
@@ -147,21 +133,21 @@ Use [Conventional Commits 1.0.0][conventional-commit-link] when create commits.
 Run `just test` to lint and format the source code with
 [lefthook][lefthook-link]. lefthook run following tools.
 
-| Name                                                                                                                                                                                                                                  | Target type                   |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------         | :------------------------------     |
-| [eslint][eslint-link]                                                                                                                                                                                                                 | js, ts, and tsx               |
-| [yamllint][yamllint-link]                                                                                                                                                                                                             | YAML files                    |
-| [taplo][taplo-link]                                                                                                                                                                                                                   | TOML files                    |
-| [just][just-link]                                                                                                                                                                                                                     | justfile                      |
-| [markdownlint][markdownlint-link] + [markdown-link-check][markdown-link-check-link]                                                                                                                                                 | Markdown files                  |
-| [vale][vale-link]                                                                                                                                                                                                                     | prose                         |
-| [shfmt][shfmt-link] + [shellharden][shellharden-link] + [shellcheck][shellcheck-link]                                                                                                                                               | shell scripts                   |
-| [commitlint][commitlint-link]                                                                                                                                                                                                         | commit messages               |
-| [gitleaks][gitleaks-link]                                                                                                                                                                                                             | secrets                       |
-| [codespell][codespell-link]                                                                                                                                                                                                           | misspellings                  |
-| [actionlint][actionlint-link]                                                                                                                                                                                                         | GitHub Actions workflow files |
-| [terraform fmt][terraform-fmt-link] + [terraform validate][terraform-validate-link] + [terrascan][terrascan-link] + [trivy][trivy-link] + [tflint][tflint-link] + [terraform-docs][terraform-docs-link] + [checkov][checkov-link] | tf files                            |
-| [terragrunt hclfmt][terragrunt-hclfmt-link]                                                                                                                                                                                           | terragrunt.hcl                |
+| Name                                                                                                                                                                                                                                | Target type                   |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------         | :------------------------------ |
+| [eslint][eslint-link]                                                                                                                                                                                                               | js, ts, and tsx               |
+| [yamllint][yamllint-link]                                                                                                                                                                                                           | YAML files                    |
+| [taplo][taplo-link]                                                                                                                                                                                                                 | TOML files                    |
+| [just][just-link]                                                                                                                                                                                                                   | justfile                      |
+| [markdownlint][markdownlint-link] + [markdown-link-check][markdown-link-check-link]                                                                                                                                                 | Markdown files                |
+| [vale][vale-link]                                                                                                                                                                                                                   | prose                         |
+| [shfmt][shfmt-link] + [shellharden][shellharden-link] + [shellcheck][shellcheck-link]                                                                                                                                               | shell scripts                 |
+| [commitlint][commitlint-link]                                                                                                                                                                                                       | commit messages               |
+| [gitleaks][gitleaks-link]                                                                                                                                                                                                           | secrets                       |
+| [codespell][codespell-link]                                                                                                                                                                                                         | misspellings                  |
+| [actionlint][actionlint-link]                                                                                                                                                                                                       | GitHub Actions workflow files |
+| [terraform fmt][terraform-fmt-link] + [terraform validate][terraform-validate-link] + [terrascan][terrascan-link] + [trivy][trivy-link] + [tflint][tflint-link] + [terraform-docs][terraform-docs-link] + [checkov][checkov-link] | tf files                        |
+| [terragrunt hclfmt][terragrunt-hclfmt-link]                                                                                                                                                                                         | terragrunt.hcl                |
 
 [lefthook-link]: https://github.com/evilmartians/lefthook
 [lighthouse-ci-link]: https://github.com/GoogleChrome/lighthouse-ci
@@ -186,8 +172,8 @@ Run `just test` to lint and format the source code with
 
 ## Update
 
-Run `just update` to update dependency packages. [Renovate][renovate-link]
-create update pull requests every 3 months on the first day of the month.
+[Renovate][renovate-link] create update pull requests every 3 months
+on the first day of the month.
 
 [renovate-link]: https://renovatebot.com
 

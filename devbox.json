@@ -1,0 +1,26 @@
+{
+  "packages": [
+    "codespell@2.1.0",
+    "bash@5.1-p16",
+    "gnugrep@3.7",
+    "gnused@4.8",
+    "gawk@5.1.1",
+    "coreutils@9.1",
+    "findutils@4.9.0",
+    "parallel@20220322",
+    "atool@0.39.0",
+    "shellharden@4.1.2",
+    "taplo@0.8.0",
+    "yamllint@1.26.3"
+  ],
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to devbox!' > /dev/null"
+    ],
+    "scripts": {
+      "test": [
+        "echo \"Error: no test specified\" && exit 1"
+      ]
+    }
+  }
+}

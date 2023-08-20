@@ -67,7 +67,7 @@ Need Linux (64-bit) machine and following tools.
 
 | Name                                  | Description                   | Version     |
 | :------------------------------------ | :---------------------------- | :---------- |
-| [rtx][rtx-link]                       | Version manager               | ~> 1.34.1   |
+| [rtx][rtx-link]                       | Version manager               | >= v2023.8.1   |
 | [devbox][devbox-link]                 | Version manager               | ~> 0.5.7    |
 | [Docker][docker-link]                 | Virtualization software       | ~> 20.10.14 |
 

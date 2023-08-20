@@ -12,7 +12,7 @@ runs:
     - uses: jdxcode/rtx-action@v1.2.0
     - name: Cache packages
       id: packages-cache
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: |
           ~/.config/direnv/

@@ -1,7 +1,9 @@
 {
   "extends": [
     "config:base",
-    ":automergePatch",
+    ":automergeMinor",
+    ":automergeBranch",
+    ":automergeRequireAllStatusChecks",
     "schedule:quarterly",
     "group:allNonMajor"
   ],

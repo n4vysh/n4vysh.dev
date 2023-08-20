@@ -3,13 +3,13 @@ name: main
 "on": push
 jobs:
   install-packages:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
       - name: Install packages
         uses: ./.github/actions/install-packages
   lefthook:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     needs:
       - install-packages
     strategy:

@@ -6,7 +6,8 @@ runs:
   steps:
     - uses: jetpack-io/devbox-install-action@v0.4.0
       with:
-        enable-cache: true
+        # NOTE: prevent permission error
+        enable-cache: false
         devbox-version: "0.5.11"
     - uses: jdxcode/rtx-action@v1.2.0
     - name: Cache packages

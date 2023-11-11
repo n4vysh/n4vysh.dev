@@ -5,9 +5,9 @@
 This repository contains the source code of the website to show technical
 skillsets and expertise.
 
-Clearnet           | Darknet
-:-                 | :-
-<https://n4vysh.dev> | <http://xdd456duxxh47o3uxu2ql3lj76i6e7paofm7shfts2p6gavqbvngfpqd.onion>
+| Clearnet             | Darknet                                                                 |
+| :------------------- | :---------------------------------------------------------------------- |
+| <https://n4vysh.dev> | <http://xdd456duxxh47o3uxu2ql3lj76i6e7paofm7shfts2p6gavqbvngfpqd.onion> |
 
 ## Features
 
@@ -65,11 +65,11 @@ Clearnet           | Darknet
 
 Need Linux (64-bit) machine and following tools.
 
-| Name                                  | Description                   | Version     |
-| :------------------------------------ | :---------------------------- | :---------- |
-| [rtx][rtx-link]                       | Version manager               | >= v2023.8.1   |
-| [devbox][devbox-link]                 | Version manager               | ~> 0.5.7    |
-| [Docker][docker-link]                 | Virtualization software       | ~> 20.10.14 |
+| Name                  | Description             | Version      |
+| :-------------------- | :---------------------- | :----------- |
+| [rtx][rtx-link]       | Version manager         | >= v2023.8.1 |
+| [devbox][devbox-link] | Version manager         | ~> 0.5.7     |
+| [Docker][docker-link] | Virtualization software | ~> 20.10.14  |
 
 Suggest use Editor or IDE that supports [EditorConfig][editorconfig-link],
 [LSP][lsp-link], formatter, and linter. For windows or macos user, suggest use
@@ -133,21 +133,21 @@ Use [Conventional Commits 1.0.0][conventional-commit-link] when create commits.
 Run `just test` to lint and format the source code with
 [lefthook][lefthook-link]. lefthook run following tools.
 
-| Name                                                                                                                                                                                                                                | Target type                   |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------         | :------------------------------ |
-| [eslint][eslint-link]                                                                                                                                                                                                               | js, ts, and tsx               |
-| [yamllint][yamllint-link]                                                                                                                                                                                                           | YAML files                    |
-| [taplo][taplo-link]                                                                                                                                                                                                                 | TOML files                    |
-| [just][just-link]                                                                                                                                                                                                                   | justfile                      |
-| [markdownlint][markdownlint-link] + [markdown-link-check][markdown-link-check-link]                                                                                                                                                 | Markdown files                |
-| [vale][vale-link]                                                                                                                                                                                                                   | prose                         |
-| [shfmt][shfmt-link] + [shellharden][shellharden-link] + [shellcheck][shellcheck-link]                                                                                                                                               | shell scripts                 |
-| [commitlint][commitlint-link]                                                                                                                                                                                                       | commit messages               |
-| [gitleaks][gitleaks-link]                                                                                                                                                                                                           | secrets                       |
-| [codespell][codespell-link]                                                                                                                                                                                                         | misspellings                  |
-| [actionlint][actionlint-link]                                                                                                                                                                                                       | GitHub Actions workflow files |
-| [terraform fmt][terraform-fmt-link] + [terraform validate][terraform-validate-link] + [terrascan][terrascan-link] + [trivy][trivy-link] + [tflint][tflint-link] + [terraform-docs][terraform-docs-link] + [checkov][checkov-link] | tf files                        |
-| [terragrunt hclfmt][terragrunt-hclfmt-link]                                                                                                                                                                                         | terragrunt.hcl                |
+| Name                                                                                                                                                                                                                              | Target type                   |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------- |
+| [eslint][eslint-link]                                                                                                                                                                                                             | js, ts, and tsx               |
+| [yamllint][yamllint-link]                                                                                                                                                                                                         | YAML files                    |
+| [taplo][taplo-link]                                                                                                                                                                                                               | TOML files                    |
+| [just][just-link]                                                                                                                                                                                                                 | justfile                      |
+| [markdownlint][markdownlint-link] + [markdown-link-check][markdown-link-check-link]                                                                                                                                               | Markdown files                |
+| [vale][vale-link]                                                                                                                                                                                                                 | prose                         |
+| [shfmt][shfmt-link] + [shellharden][shellharden-link] + [shellcheck][shellcheck-link]                                                                                                                                             | shell scripts                 |
+| [commitlint][commitlint-link]                                                                                                                                                                                                     | commit messages               |
+| [gitleaks][gitleaks-link]                                                                                                                                                                                                         | secrets                       |
+| [codespell][codespell-link]                                                                                                                                                                                                       | misspellings                  |
+| [actionlint][actionlint-link]                                                                                                                                                                                                     | GitHub Actions workflow files |
+| [terraform fmt][terraform-fmt-link] + [terraform validate][terraform-validate-link] + [terrascan][terrascan-link] + [trivy][trivy-link] + [tflint][tflint-link] + [terraform-docs][terraform-docs-link] + [checkov][checkov-link] | tf files                      |
+| [terragrunt hclfmt][terragrunt-hclfmt-link]                                                                                                                                                                                       | terragrunt.hcl                |
 
 [lefthook-link]: https://github.com/evilmartians/lefthook
 [lighthouse-ci-link]: https://github.com/GoogleChrome/lighthouse-ci
@@ -186,15 +186,15 @@ Run `just list` to list available commands in command runner.
 Run `ENV=prd just deploy` to deploy server resources with Terraform and Terragrunt.
 Terragrunt use following terraform modules.
 
-| Tier      | Name                                                                                                         |
-| :-------- | :--------------------------------------------------------------------------------------------------------- |
-| Verified  | [terraform-aws-modules/iam/aws//modules/iam-assumable-role-with-oidc][terraform-module-iam-oidc-link]      |
-| Verified  | [terraform-aws-modules/iam/aws//modules/iam-policy][terraform-module-iam-policy-link]                      |
-| Verified  | [terraform-aws-modules/route53/aws//modules/delegation-sets][terraform-module-route53-ds-link]             |
-| Verified  | [terraform-aws-modules/route53/aws//modules/records][terraform-module-route53-records-link]                |
-| Verified  | [terraform-aws-modules/route53/aws//modules/zones][terraform-module-route53-zones-link]                    |
-| Self‐made | [aws-iam-idp](./infra/terraform/modules/aws-iam-idp/README.md)                                               |
-| Self‐made | [aws-route53-dnssec](./infra/terraform/modules/aws-route53-dnssec/README.md)                                 |
+| Tier      | Name                                                                                                  |
+| :-------- | :---------------------------------------------------------------------------------------------------- |
+| Verified  | [terraform-aws-modules/iam/aws//modules/iam-assumable-role-with-oidc][terraform-module-iam-oidc-link] |
+| Verified  | [terraform-aws-modules/iam/aws//modules/iam-policy][terraform-module-iam-policy-link]                 |
+| Verified  | [terraform-aws-modules/route53/aws//modules/delegation-sets][terraform-module-route53-ds-link]        |
+| Verified  | [terraform-aws-modules/route53/aws//modules/records][terraform-module-route53-records-link]           |
+| Verified  | [terraform-aws-modules/route53/aws//modules/zones][terraform-module-route53-zones-link]               |
+| Self‐made | [aws-iam-idp](./infra/terraform/modules/aws-iam-idp/README.md)                                        |
+| Self‐made | [aws-route53-dnssec](./infra/terraform/modules/aws-route53-dnssec/README.md)                          |
 
 Self-made modules follow
 [Terraform Best Practices](https://www.terraform-best-practices.com/).
@@ -211,9 +211,13 @@ with [conftest][conftest-link] after the call to Terraform.
 
 ## License
 
-This icon ([svg file](./frontend/public/images/icon.svg)) distributed under the CC
-BY-NC-ND 4.0. Other files distributed under the MIT license. See the
-[LICENSE.txt](./LICENSE.txt) file for details.
+[Icon](./frontend/public/images/icon.svg) distributed under
+the [CC-BY 4.0][cc-link]. All other files distributed under
+the [Unlicense][unlicense-link]. See the [LICENSE](./LICENSE) file
+and [UNLICENSE](./UNLICENSE) file for details.
+
+[cc-link]: https://choosealicense.com/licenses/cc-by-4.0/
+[unlicense-link]: https://choosealicense.com/licenses/unlicense/
 
 <!-- markdownlint-configure-file
 {

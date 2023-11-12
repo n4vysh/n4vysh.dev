@@ -68,7 +68,7 @@ Need Linux (64-bit) machine and following tools.
 | Name                  | Description             | Version      |
 | :-------------------- | :---------------------- | :----------- |
 | [rtx][rtx-link]       | Version manager         | >= v2023.8.1 |
-| [devbox][devbox-link] | Version manager         | ~> 0.5.7     |
+| [devbox][devbox-link] | Version manager         | ~> 0.8.1     |
 | [Docker][docker-link] | Virtualization software | ~> 20.10.14  |
 
 Suggest use Editor or IDE that supports [EditorConfig][editorconfig-link],

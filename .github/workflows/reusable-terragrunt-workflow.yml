@@ -24,7 +24,7 @@ name: reusable terragrunt workflow
         description: infracost API key
 jobs:
   set-terragrunt-info:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     outputs:
       dirs: ${{ steps.output-terragrunt-info.outputs.dirs }}
     steps:
@@ -32,7 +32,7 @@ jobs:
       - id: output-terragrunt-info
         run: .github/scripts/output-terragrunt-info.bash ${{inputs.environment}}
   terragrunt-plan:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     if: needs.set-terragrunt-info.outputs.dirs != '[]'
     needs:
       - set-terragrunt-info
@@ -76,7 +76,7 @@ jobs:
           just plan
         working-directory: ./infra/terragrunt/
   terragrunt-apply:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     if: github.ref == 'refs/heads/main'
     needs:
       - set-terragrunt-info

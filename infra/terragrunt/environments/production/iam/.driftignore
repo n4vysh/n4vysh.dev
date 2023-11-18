@@ -14,3 +14,5 @@ aws_iam_policy_attachment.*-website-blue-eks-node-group-*
 aws_iam_policy_attachment.*-website-green-eks-node-group-*
 aws_iam_policy_attachment.AWSServiceRoleFor*
 aws_iam_role_policy.OrganizationAccountAccessRole:AdministratorAccess
+aws_iam_policy_attachment.AWSReservedSSO_AdministratorAccess_*-arn:aws:iam::aws:policy/AdministratorAccess
+aws_iam_role.AWSReservedSSO_AdministratorAccess_*

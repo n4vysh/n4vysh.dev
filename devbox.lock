@@ -1,26 +1,6 @@
 {
   "lockfile_version": "1",
   "packages": {
-    "atool@0.39.0": {
-      "last_modified": "2023-10-25T20:49:13Z",
-      "resolved": "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c#atool",
-      "source": "devbox-search",
-      "version": "0.39.0",
-      "systems": {
-        "aarch64-darwin": {
-          "store_path": "/nix/store/9wv7nx90f9x6xvslz7mzh0898yf6yffw-atool-0.39.0"
-        },
-        "aarch64-linux": {
-          "store_path": "/nix/store/jpax582q4zrnysybpwai51hd6djjpflr-atool-0.39.0"
-        },
-        "x86_64-darwin": {
-          "store_path": "/nix/store/5cafs6al3cfff2nf7h11cwjsnlvyxrin-atool-0.39.0"
-        },
-        "x86_64-linux": {
-          "store_path": "/nix/store/4d3m2ksb3636rvr9h6icjvifk399wcws-atool-0.39.0"
-        }
-      }
-    },
     "bash@5.1-p16": {
       "last_modified": "2023-01-11T11:07:31Z",
       "resolved": "github:NixOS/nixpkgs/0abc5480edcab69f26e1bdd5f7ee82890cfe273f#bash",

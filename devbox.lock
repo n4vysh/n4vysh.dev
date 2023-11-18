@@ -141,6 +141,26 @@
         }
       }
     },
+    "nodePackages.prettier@3.0.3": {
+      "last_modified": "2023-10-25T20:49:13Z",
+      "resolved": "github:NixOS/nixpkgs/75a52265bda7fd25e06e3a67dee3f0354e73243c#nodePackages.prettier",
+      "source": "devbox-search",
+      "version": "3.0.3",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/29z1sm6mp1y12azji6acgqffb7b67fs5-prettier-3.0.3"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/vqbbcqjk15cg95cc7vdlqc20b8rzxzqc-prettier-3.0.3"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/iqkm39vwf27lchin87q32w4q1ck0720j-prettier-3.0.3"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/ccr8yabhhhv61pswbvl6b9nm4ynvxnna-prettier-3.0.3"
+        }
+      }
+    },
     "parallel@20220322": {
       "last_modified": "2023-01-17T09:21:52Z",
       "resolved": "github:NixOS/nixpkgs/2d38b664b4400335086a713a0036aafaa002c003#parallel",

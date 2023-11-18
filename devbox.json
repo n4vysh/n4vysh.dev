@@ -10,6 +10,7 @@
     "parallel@20220322",
     "shellharden@4.1.2",
     "taplo@0.8.0",
-    "yamllint@1.26.3"
+    "yamllint@1.26.3",
+    "nodePackages.prettier@3.0.3"
   ]
 }

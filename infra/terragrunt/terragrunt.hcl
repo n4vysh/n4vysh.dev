@@ -1,6 +1,6 @@
 skip                          = true
-terraform_version_constraint  = "~> 1.1.7"
-terragrunt_version_constraint = "~> 0.36.3"
+terraform_version_constraint  = "~> 1"
+terragrunt_version_constraint = "~> 0"
 
 locals {
   name   = "website"

@@ -1,7 +1,7 @@
 {
   "ignorePatterns": [
     {
-      "pattern": "^(http://localhost|https://n4vysh.dev|https://runterrascan.io/|https://renovatebot.com|http://xdd456duxxh47o3uxu2ql3lj76i6e7paofm7shfts2p6gavqbvngfpqd.onion)"
+      "pattern": "^(http://localhost|https://n4vysh.dev|https://runterrascan.io/|https://renovatebot.com|http://xdd456duxxh47o3uxu2ql3lj76i6e7paofm7shfts2p6gavqbvngfpqd.onion|#)"
     }
   ]
 }

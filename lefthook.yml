@@ -97,7 +97,7 @@ pre-commit:
       root: "infra/terraform/"
       files: ./scripts/lefthook-custom-files.bash
       glob: "infra/terraform/modules/**/*.tf"
-      run: just check-fmt {files}
+      run: just check-fmt
     infra/terraform/validate:
       tags: infra/terraform
       root: "infra/terraform/"

@@ -1,4 +1,3 @@
----
 pre-commit:
   parallel: true
   commands:
@@ -122,19 +121,19 @@ pre-commit:
       root: "infra/terraform/"
       files: ./scripts/lefthook-custom-files.bash
       glob: "infra/terraform/modules/**/*.tf"
-      run: just lint-trivy
+      run: direnv exec . just lint-trivy
     infra/terraform/tflint:
       tags: infra/terraform
       root: "infra/terraform/"
       files: ./scripts/lefthook-custom-files.bash
       glob: "infra/terraform/modules/**/*.tf"
-      run: just lint-tflint
+      run: direnv exec . just lint-tflint
     infra/terraform/docs:
       tags: infra/terraform
       root: "infra/terraform/"
       files: ./scripts/lefthook-custom-files.bash
       glob: "infra/terraform/modules/**/*.tf"
-      run: just check-docs
+      run: direnv exec . just check-docs
     # infra/terragrunt
     infra/terragrunt/hclfmt:
       tags: infra/terragrunt

@@ -1,5 +1,3 @@
-set dotenv-load := false
-
 # Check codes with hooks
 test:
     lefthook run pre-commit

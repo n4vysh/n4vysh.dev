@@ -140,7 +140,7 @@ pre-commit:
       root: "infra/terragrunt/"
       files: ./scripts/lefthook-custom-files.bash
       glob: "infra/terragrunt/{,**/}*.hcl"
-      run: just check-fmt
+      run: direnv exec . just check-fmt
 commit-msg:
   parallel: true
   commands:

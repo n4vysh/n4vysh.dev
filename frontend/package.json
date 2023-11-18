@@ -23,7 +23,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "typescript-language-server": "^3.3.2",
+    "typescript-language-server": "^4.0.0",
     "vercel": "^28.20.0"
   }
 }

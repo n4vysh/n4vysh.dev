@@ -31,8 +31,8 @@ dependencies:
 
 devDependencies:
   typescript-language-server:
-    specifier: ^3.3.2
-    version: 3.3.2
+    specifier: ^4.0.0
+    version: 4.0.0
   vercel:
     specifier: ^28.20.0
     version: 28.20.0(@types/node@20.9.1)
@@ -7446,9 +7446,9 @@ packages:
       is-typed-array: 1.1.10
     dev: false
 
-  /typescript-language-server@3.3.2:
-    resolution: {integrity: sha512-jzun53CIkTbpAki0nP+hk5baGW+86SNNlVhyIj2ZUy45zUkCnmoetWuAtfRRQYrlIr8x4QB3ymGJPuwDQSd/ew==}
-    engines: {node: '>=14.17'}
+  /typescript-language-server@4.0.0:
+    resolution: {integrity: sha512-u6GLfWtHzOfGNpn0XuUYFg8Jv3oXWKzY6o5/Lt6LbWE6Ux965z2lP+vM0AN8Z2EobnlrDzzdcKusUx46j2eP3A==}
+    engines: {node: '>=18'}
     hasBin: true
     dependencies:
       vscode-jsonrpc: 5.0.1

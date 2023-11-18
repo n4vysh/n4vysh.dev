@@ -11,4 +11,5 @@ dirs=$(
 		-printf '%P\n' |
 		jq -Rnc '[inputs]'
 )
-echo "::set-output name=dirs::$dirs"
+
+echo "dirs=$dirs" >>"$GITHUB_OUTPUT"

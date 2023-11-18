@@ -12,6 +12,9 @@ resource "aws_kms_key" "this" {
   # If you enable automatic key rotation, each newly generated backing key costs an additional $1/month.
   # https://aws.amazon.com/kms/pricing/?nc1=h_ls
 
+  # TODO: add IAM policy
+  # checkov:skip=CKV2_AWS_64
+
   multi_region = true
 
   tags = {

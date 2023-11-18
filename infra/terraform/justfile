@@ -8,7 +8,7 @@ fmt:
 
 # validate terraform config
 validate:
-    ./scripts/terraform-validate.bash
+    direnv exec . ./scripts/terraform-validate.bash
 
 # check document with terraform-docs
 check-docs:

@@ -1,6 +1,6 @@
 aws-vault      7.2.0
 awscli         2.13.37
-checkov        3.0.38
+checkov        3.0.39
 conftest       0.30.0
 driftctl       v0.24.0
 gopass         1.12.8

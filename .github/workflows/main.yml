@@ -1,9 +1,25 @@
----
 name: main
 "on": push
 jobs:
+  changes:
+    runs-on: ubuntu-22.04
+    permissions:
+      pull-requests: read
+      contents: read
+    outputs:
+      infra: ${{ steps.changes.outputs.infra }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: |
+            infra:
+              - 'infra/**'
   install-packages:
     runs-on: ubuntu-22.04
+    needs:
+      - changes
     steps:
       - uses: actions/checkout@v4
       - name: Install packages
@@ -25,6 +41,7 @@ jobs:
           eval "$(direnv export bash)"
           just test
   deploy-prd:
+    if: ${{ needs.changes.outputs.infra == 'true' }}
     # yamllint disable-line rule:line-length
     uses: n4vysh/n4vysh.dev/.github/workflows/reusable-terragrunt-workflow.yml@main
     with:
@@ -39,6 +56,7 @@ jobs:
       PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
   deploy-stg:
+    if: ${{ needs.changes.outputs.infra == 'true' }}
     # yamllint disable-line rule:line-length
     uses: n4vysh/n4vysh.dev/.github/workflows/reusable-terragrunt-workflow.yml@main
     with:

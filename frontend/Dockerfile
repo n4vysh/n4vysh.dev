@@ -14,7 +14,7 @@ COPY --chown=node:node .eslintrc.json .
 
 RUN pnpm build
 
-FROM nginx:1.24.0-alpine-slim
+FROM nginx:1.25.3-alpine-slim
 
 ARG S6_OVERLAY_VERSION=3.1.4.1
 

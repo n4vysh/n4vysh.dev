@@ -1,9 +1,9 @@
 {
-  "packageManager": "pnpm@8.3.1",
+  "packageManager": "pnpm@8.10.5",
   "devDependencies": {
     "@commitlint/cli": "18.4.2",
     "@commitlint/config-conventional": "18.4.2",
-    "markdown-link-check": "3.8.7",
-    "markdownlint-cli": "0.30.0"
+    "markdown-link-check": "3.11.2",
+    "markdownlint-cli": "0.37.0"
   }
 }

@@ -81,8 +81,6 @@ jobs:
     needs:
       - set-terragrunt-info
       - terragrunt-plan
-    strategy:
-      fail-fast: false
     environment:
       name: ${{ inputs.environment }}
       url: ${{ inputs.url }}

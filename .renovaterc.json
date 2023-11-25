@@ -1,6 +1,7 @@
 {
   "extends": [
     "config:recommended",
+    ":semanticCommitTypeAll(chore)",
     ":automergeMajor",
     ":automergeBranch",
     ":automergeRequireAllStatusChecks",

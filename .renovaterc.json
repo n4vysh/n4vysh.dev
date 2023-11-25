@@ -1,7 +1,7 @@
 {
   "extends": [
     "config:base",
-    ":automergeMinor",
+    ":automergeMajor",
     ":automergeBranch",
     ":automergeRequireAllStatusChecks",
     "schedule:automergeWeekends",

@@ -1,6 +1,6 @@
 {
   "extends": [
-    "config:base",
+    "config:recommended",
     ":automergeMajor",
     ":automergeBranch",
     ":automergeRequireAllStatusChecks",

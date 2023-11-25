@@ -2,6 +2,7 @@
   "extends": [
     "config:recommended",
     ":semanticCommitTypeAll(chore)",
+    ":disableDependencyDashboard",
     ":automergeMajor",
     ":automergeBranch",
     ":automergeRequireAllStatusChecks",

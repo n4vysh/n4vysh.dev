@@ -21,26 +21,6 @@
         }
       }
     },
-    "codespell@2.1.0": {
-      "last_modified": "2022-08-16T08:43:52Z",
-      "resolved": "github:NixOS/nixpkgs/6c6409e965a6c883677be7b9d87a95fab6c3472e#codespell",
-      "source": "devbox-search",
-      "version": "2.1.0",
-      "systems": {
-        "aarch64-darwin": {
-          "store_path": "/nix/store/g1733c4cf18b95v78l19ddsb5kmqfl48-codespell-2.1.0"
-        },
-        "aarch64-linux": {
-          "store_path": "/nix/store/w2dcdya0mwrl66rl7q2bycgp16z7qn2w-codespell-2.1.0"
-        },
-        "x86_64-darwin": {
-          "store_path": "/nix/store/x95c9dsdyag075s36qrynyddfzklagr7-codespell-2.1.0"
-        },
-        "x86_64-linux": {
-          "store_path": "/nix/store/gin4jfbmfpz74fvlxf9526d9ma2w8k0i-codespell-2.1.0"
-        }
-      }
-    },
     "coreutils@9.1": {
       "last_modified": "2023-06-04T15:54:08Z",
       "resolved": "github:NixOS/nixpkgs/2e56a850786211972d99d2bb39665a9b5a1801d6#coreutils",

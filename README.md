@@ -144,7 +144,7 @@ Run `just test` to lint and format the source code with
 | [shfmt][shfmt-link] + [shellharden][shellharden-link] + [shellcheck][shellcheck-link]                                                                                                                                             | shell scripts                 |
 | [commitlint][commitlint-link]                                                                                                                                                                                                     | commit messages               |
 | [gitleaks][gitleaks-link]                                                                                                                                                                                                         | secrets                       |
-| [codespell][codespell-link]                                                                                                                                                                                                       | misspellings                  |
+| [typos][typos-link]                                                                                                                                                                                                               | misspellings                  |
 | [actionlint][actionlint-link]                                                                                                                                                                                                     | GitHub Actions workflow files |
 | [terraform fmt][terraform-fmt-link] + [terraform validate][terraform-validate-link] + [terrascan][terrascan-link] + [trivy][trivy-link] + [tflint][tflint-link] + [terraform-docs][terraform-docs-link] + [checkov][checkov-link] | tf files                      |
 | [terragrunt hclfmt][terragrunt-hclfmt-link]                                                                                                                                                                                       | terragrunt.hcl                |
@@ -160,7 +160,7 @@ Run `just test` to lint and format the source code with
 [shellcheck-link]: https://www.shellcheck.net/
 [commitlint-link]: https://commitlint.js.org/#/
 [gitleaks-link]: https://github.com/zricethezav/gitleaks
-[codespell-link]: https://github.com/codespell-project/codespell
+[typos-link]: https://github.com/crate-ci/typos
 [actionlint-link]: https://github.com/rhysd/actionlint
 [terraform-fmt-link]: https://www.terraform.io/cli/commands/fmt
 [terraform-validate-link]: https://www.terraform.io/cli/commands/validate

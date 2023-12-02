@@ -1,5 +1,5 @@
 actionlint           1.6.26
-direnv               2.32.3
+direnv               2.33.0
 editorconfig-checker 2.6.0
 gitleaks             8.5.1
 jq                   1.6

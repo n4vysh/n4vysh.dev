@@ -7,15 +7,15 @@ jobs:
       pull-requests: read
       contents: read
     outputs:
-      infra: ${{ steps.changes.outputs.infra }}
+      infra: ${{ steps.changed-files-yaml.outputs.infra_any_changed }}
     steps:
       - uses: actions/checkout@v4
-      - uses: dorny/paths-filter@v2
-        id: changes
+      - uses: tj-actions/changed-files@v40
+        id: changed-files-yaml
         with:
-          filters: |
+          files_yaml: |
             infra:
-              - 'infra/**'
+              - infra/**
   install-packages:
     runs-on: ubuntu-22.04
     needs:
@@ -48,6 +48,7 @@ jobs:
       # yamllint disable-line rule:line-length
       role-to-assume: arn:aws:iam::804137327620:role/prd-website-github-actions
     needs:
+      - changes
       - install-packages
       - lefthook
     secrets:
@@ -62,8 +63,21 @@ jobs:
       url: https://stg.n4vysh.dev
       role-to-assume: dummy-arn
     needs:
+      - changes
       - install-packages
       - lefthook
     secrets:
       PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
+  passing:
+    if: failure() == false && contains(needs.*.result, 'cancelled') == false
+    runs-on: ubuntu-22.04
+    needs:
+      - install-packages
+      - lefthook
+      - deploy-stg
+      - deploy-prd
+    steps:
+      - run: echo "$json"
+        env:
+          json: ${{ toJSON(needs) }}

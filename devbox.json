@@ -1,6 +1,5 @@
 {
   "packages": [
-    "codespell@2.1.0",
     "bash@5.1-p16",
     "gnugrep@3.7",
     "gnused@4.8",

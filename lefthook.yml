@@ -68,7 +68,7 @@ pre-commit:
       glob: "{,**/}{*.bash,.envrc}"
       run: just lint-bash {files}
     # text
-    root/codespell:
+    root/typos:
       tags: text
       files: ./scripts/lefthook-custom-files.bash
       run: direnv exec . just lint-text {files}

@@ -86,9 +86,9 @@ lint-commit-gitleaks:
 lint-bash *target:
     shellcheck -s bash {{ target }}
 
-# check common misspellings in text files with codespell
+# check common misspellings in text files with typos
 lint-text *target:
-    codespell {{ target }}
+    typos --hidden {{ target }}
 
 # check GitHub Actions workflow files with actionlint
 lint-ci *target:

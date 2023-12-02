@@ -22,7 +22,7 @@ name: reusable terragrunt workflow
         required: true
         description: infracost API key
 jobs:
-  set-terragrunt-info:
+  set-target-dirs:
     runs-on: ubuntu-22.04
     outputs:
       dirs: ${{ steps.output-terragrunt-info.outputs.dirs }}
@@ -30,16 +30,16 @@ jobs:
       - uses: actions/checkout@v4
       - id: output-terragrunt-info
         run: .github/scripts/output-terragrunt-info.bash ${{inputs.environment}}
-  terragrunt-plan:
+  plan:
     runs-on: ubuntu-22.04
-    if: needs.set-terragrunt-info.outputs.dirs != '[]'
+    if: needs.set-target-dirs.outputs.dirs != '[]'
     needs:
-      - set-terragrunt-info
+      - set-target-dirs
     strategy:
       fail-fast: false
       matrix:
         # yamllint disable-line rule:line-length
-        dir: ${{ fromJson(needs.set-terragrunt-info.outputs.dirs) }}
+        dir: ${{ fromJson(needs.set-target-dirs.outputs.dirs) }}
     environment:
       name: ${{ inputs.environment }}
       url: ${{ inputs.url }}
@@ -74,12 +74,12 @@ jobs:
           eval "$(direnv export bash)"
           just plan
         working-directory: ./infra/terragrunt/
-  terragrunt-apply:
+  apply:
     runs-on: ubuntu-22.04
     if: github.ref == 'refs/heads/main'
     needs:
-      - set-terragrunt-info
-      - terragrunt-plan
+      - set-target-dirs
+      - plan
     environment:
       name: ${{ inputs.environment }}
       url: ${{ inputs.url }}

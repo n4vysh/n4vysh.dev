@@ -150,8 +150,6 @@ Run `just test` to lint and format the source code with
 | [terragrunt hclfmt][terragrunt-hclfmt-link]                                                                                                                                                                                       | terragrunt.hcl                |
 
 [lefthook-link]: https://github.com/evilmartians/lefthook
-[lighthouse-ci-link]: https://github.com/GoogleChrome/lighthouse-ci
-[lighthouse-link]: https://github.com/GoogleChrome/lighthouse
 [taplo-link]: https://taplo.tamasfe.dev/
 [just-link]: https://github.com/casey/just
 [markdownlint-link]: https://github.com/DavidAnson/markdownlint

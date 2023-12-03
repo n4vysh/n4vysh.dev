@@ -97,6 +97,26 @@
           "store_path": "/nix/store/lsvkxmc3bqg9p6xfndqp8w58g3p4c1r6-taplo-0.8.0"
         }
       }
+    },
+    "yamllint@1.26.3": {
+      "last_modified": "2022-07-19T17:55:53Z",
+      "resolved": "github:NixOS/nixpkgs/6f884c2f43c7bb105816303eb4867da672ec6f39#yamllint",
+      "source": "devbox-search",
+      "version": "1.26.3",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/h98v9km3zz7k6azf602h01zmv7qdwkfg-python3.10-yamllint-1.26.3"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/8ib4y3y2mlk5m49dhc7dw1ijf8lawj1x-python3.10-yamllint-1.26.3"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/8g09rpvqr6gy1czr7j0kj71xzydlcimg-python3.10-yamllint-1.26.3"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/b1531f4wy9k4r5x64xrcmi262mc3v1zb-python3.10-yamllint-1.26.3"
+        }
+      }
     }
   }
 }

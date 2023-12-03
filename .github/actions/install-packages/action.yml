@@ -27,6 +27,7 @@ runs:
     - uses: jetpack-io/devbox-install-action@v0.7.0
       with:
         devbox-version: "0.8.2"
+        enable-cache: "true"
     - name: Cache packages
       id: packages-cache
       uses: actions/cache@v3

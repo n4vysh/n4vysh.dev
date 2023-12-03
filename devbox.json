@@ -1,10 +1,5 @@
 {
   "packages": [
-    "bash@5.1-p16",
-    "gnugrep@3.7",
-    "gnused@4.8",
-    "coreutils@9.1",
-    "findutils@4.9.0",
     "parallel@20220322",
     "shellharden@4.1.2",
     "taplo@0.8.0",

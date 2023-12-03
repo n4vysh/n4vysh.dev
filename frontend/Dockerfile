@@ -5,7 +5,7 @@ COPY --chown=node:node package.json ./
 COPY --chown=node:node pnpm-lock.yaml ./
 RUN corepack enable pnpm && corepack prepare --activate
 USER node
-RUN NODE_ENV=production pnpm install
+RUN NODE_ENV=production pnpm install --frozen-lockfile
 COPY --chown=node:node app/ app/
 COPY --chown=node:node public/ public/
 COPY --chown=node:node next* .

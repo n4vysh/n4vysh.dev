@@ -6,6 +6,7 @@ dir=$(
 )
 
 "$dir/scripts/install/devbox.bash"
+eval "$(devbox shellenv)"
 
 if [[ $CI == true ]]; then
 	"$dir/scripts/install/rtx-direnv-integration.bash"

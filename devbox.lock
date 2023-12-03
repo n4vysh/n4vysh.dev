@@ -161,6 +161,26 @@
         }
       }
     },
+    "rtx@2023.11.2": {
+      "last_modified": "2023-11-17T14:14:56Z",
+      "resolved": "github:NixOS/nixpkgs/a71323f68d4377d12c04a5410e214495ec598d4c#rtx",
+      "source": "devbox-search",
+      "version": "2023.11.2",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/hf6gxc35skqbn5jmc9l6aavp68dlwsmw-rtx-2023.11.2"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/1zg4syf0ikmw7frcf2y8kdy9l8rh3m7r-rtx-2023.11.2"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/w5381rr0by7xxj61yvb8y3qz0fc585cj-rtx-2023.11.2"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/q2qjv1cgw0x82iq3qk7v2l9nhs53vlv1-rtx-2023.11.2"
+        }
+      }
+    },
     "shellharden@4.1.2": {
       "last_modified": "2021-11-02T07:46:27Z",
       "resolved": "github:NixOS/nixpkgs/481afad2658993463d390b184e259d73fcd374ea#shellharden",

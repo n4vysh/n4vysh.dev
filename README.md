@@ -65,17 +65,15 @@ skillsets and expertise.
 
 Need Linux (64-bit) machine and following tools.
 
-| Name                  | Description             | Version      |
-| :-------------------- | :---------------------- | :----------- |
-| [rtx][rtx-link]       | Version manager         | >= v2023.8.1 |
-| [devbox][devbox-link] | Version manager         | ~> 0.8.2     |
-| [Docker][docker-link] | Virtualization software | ~> 20.10.14  |
+| Name                  | Description             | Version     |
+| :-------------------- | :---------------------- | :---------- |
+| [devbox][devbox-link] | Version manager         | ~> 0.8.2    |
+| [Docker][docker-link] | Virtualization software | ~> 20.10.14 |
 
 Suggest use Editor or IDE that supports [EditorConfig][editorconfig-link],
 [LSP][lsp-link], formatter, and linter. For windows or macos user, suggest use
 [WSL][wsl-link] or [Lima][lima-link]. Probably it works.
 
-[rtx-link]: https://github.com/jdxcode/rtx
 [devbox-link]: https://www.jetpack.io/devbox
 [wsl-link]: https://docs.microsoft.com/en-us/windows/wsl/
 [lima-link]: https://github.com/lima-vm/lima
@@ -89,7 +87,7 @@ Preview and edit the website on local machine as follows:
 1. [Clone this repository on local machine][gh-clone-link]
 2. Go to the project root directory of this repository in terminal
 3. Run [`./scripts/install-packages.bash`][script-link] to install packages via
-   rtx and devbox
+   devbox and [rtx][rtx-link]
 
 frontend - clearnet:
 
@@ -120,6 +118,7 @@ Use [Conventional Commits 1.0.0][conventional-commit-link] when create commits.
 
 [gh-clone-link]: https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories
 [script-link]: ./scripts/install-packages.bash
+[rtx-link]: https://github.com/jdxcode/rtx
 [tsserver-link]: https://github.com/typescript-language-server/typescript-language-server
 [eslint-link]: https://eslint.org/
 [pnpm-link]: https://pnpm.io/

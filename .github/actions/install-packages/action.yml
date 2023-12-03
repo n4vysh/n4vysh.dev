@@ -28,5 +28,5 @@ runs:
         key: ${{ runner.os }}-${{ hashFiles('**/scripts/install-packages.bash', '**/scripts/install/*.bash', '**/.envrc', '**/.tool-versions', 'misc/pnpm-lock.yaml', 'frontend/pnpm-lock.yaml', '**/bin/', '.vale.ini') }}
     - name: Install packages
       if: steps.packages-cache.outputs.cache-hit != 'true'
-      run: ./scripts/install-packages.bash -ie
+      run: ./scripts/install-packages.bash
       shell: bash

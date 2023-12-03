@@ -1,19 +1,5 @@
 #!/bin/bash
 
-declare -A flag
-while getopts ie opt; do
-	case "$opt" in
-	i)
-		flag[i]=1
-		;;
-	e)
-		flag[e]=1
-		;;
-	*) ;;
-	esac
-done
-shift $((OPTIND - 1))
-
 dir=$(
 	cd "$(dirname "$0")" || exit
 	git rev-parse --show-toplevel
@@ -21,14 +7,14 @@ dir=$(
 
 "$dir/scripts/install/devbox.bash"
 
-if [[ ${flag[i]} == 1 ]]; then
+if [[ $CI == true ]]; then
 	"$dir/scripts/install/rtx-direnv-integration.bash"
 fi
 
 "$dir/scripts/install/rtx-packages.bash" "$dir"
 "$dir/scripts/install/rtx-direnv.bash" "$dir"
 
-if [[ ${flag[e]} == 1 ]]; then
+if [[ $CI == true ]]; then
 	eval "$(direnv export bash)"
 fi
 

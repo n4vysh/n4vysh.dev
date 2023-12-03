@@ -3,10 +3,31 @@ description: "Install packages"
 runs:
   using: "composite"
   steps:
+    - name: Cache direnv
+      id: direnv-cache
+      uses: actions/cache@v3
+      with:
+        path: /opt/direnv/bin
+        # yamllint disable-line rule:line-length
+        key: ${{ runner.os }}-${{ hashFiles('.github/actions/install-packages/action.yml') }}
+    - name: Install direnv
+      if: steps.direnv-cache.outputs.cache-hit != 'true'
+      run: |
+        mkdir -p /opt/direnv/bin
+        curl -sfL https://direnv.net/install.sh | bash
+      env:
+        version: v2.32.3
+        bin_path: /opt/direnv/bin
+      shell: bash
+    - name: Activate direnv
+      run: |
+        echo /opt/direnv/bin >>"$GITHUB_PATH"
+        eval "$(direnv export bash)"
+      shell: bash
     - uses: jetpack-io/devbox-install-action@v0.7.0
       with:
         devbox-version: "0.8.2"
-    - uses: jdxcode/rtx-action@v1.2.4
+        enable-cache: "true"
     - name: Cache packages
       id: packages-cache
       uses: actions/cache@v3
@@ -28,5 +49,5 @@ runs:
         key: ${{ runner.os }}-${{ hashFiles('**/scripts/install-packages.bash', '**/scripts/install/*.bash', '**/.envrc', '**/.tool-versions', 'misc/pnpm-lock.yaml', 'frontend/pnpm-lock.yaml', '**/bin/', '.vale.ini') }}
     - name: Install packages
       if: steps.packages-cache.outputs.cache-hit != 'true'
-      run: ./scripts/install-packages.bash -ie
+      run: ./scripts/install-packages.bash
       shell: bash

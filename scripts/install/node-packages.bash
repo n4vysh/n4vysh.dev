@@ -8,5 +8,5 @@ dir=$1
 	corepack prepare --activate
 	rtx reshim nodejs
 	pnpm -v
-	pnpm install
+	pnpm install --frozen-lockfile
 )

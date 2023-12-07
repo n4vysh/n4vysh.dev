@@ -1,4 +1,4 @@
-FROM node:21.3.0-alpine3.17 AS build-env
+FROM node:21.4.0-alpine3.17 AS build-env
 
 WORKDIR /home/node/
 COPY --chown=node:node package.json ./

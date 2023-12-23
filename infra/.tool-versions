@@ -10,5 +10,5 @@ terraform-docs 0.17.0
 terraform-ls   0.26.0
 terragrunt     0.54.10
 terrascan      1.13.2
-tflint         0.49.0
+tflint         0.50.0
 trivy          0.48.1

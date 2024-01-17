@@ -5,7 +5,7 @@ runs:
   steps:
     - name: Cache direnv
       id: direnv-cache
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: /opt/direnv/bin
         # yamllint disable-line rule:line-length
@@ -30,7 +30,7 @@ runs:
         enable-cache: "true"
     - name: Cache packages
       id: packages-cache
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: |
           ~/.config/direnv/

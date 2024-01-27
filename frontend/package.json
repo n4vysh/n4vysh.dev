@@ -10,9 +10,9 @@
     "deploy": "vercel",
     "deploy:prod": "vercel --prod"
   },
-  "packageManager": "pnpm@8.14.3",
+  "packageManager": "pnpm@8.15.0",
   "dependencies": {
-    "@types/node": "20.11.7",
+    "@types/node": "20.11.8",
     "@types/react": "18.2.48",
     "@types/react-dom": "18.2.18",
     "eslint": "8.56.0",

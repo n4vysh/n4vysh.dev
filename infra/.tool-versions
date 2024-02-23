@@ -1,5 +1,5 @@
 aws-vault      7.2.0
-awscli         2.15.22
+awscli         2.15.23
 checkov        3.2.24
 conftest       0.30.0
 driftctl       v0.24.0
@@ -8,7 +8,7 @@ infracost      0.10.30
 terraform      1.7.4
 terraform-docs 0.17.0
 terraform-ls   0.26.0
-terragrunt     0.55.8
+terragrunt     0.55.9
 terrascan      1.13.2
 tflint         0.50.3
 trivy          0.49.1

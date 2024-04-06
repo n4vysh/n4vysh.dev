@@ -10,5 +10,10 @@ with-contenv \
   '
 
 dockerize -wait unix:///var/lib/nginx/website.sock
+dockerize -wait file:///var/lib/tor/website/hostname \
+  sh -c '
+    printf "onion service hostname: "
+    cat /var/lib/tor/website/hostname
+  ' &
 
 s6-setuidgid tor env HOME=/home/tor/ tor

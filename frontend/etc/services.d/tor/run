@@ -12,6 +12,16 @@ with-contenv \
   '
 
 dockerize -wait unix:///var/lib/nginx/website.sock
+
+with-contenv \
+  s6-setuidgid tor \
+  sh -c '
+    if [ -n "$ONION_SERVICE_SSL_CERTIFICATE" ] &&
+      [ -n "$ONION_SERVICE_SSL_CERTIFICATE_KEY" ]; then
+      dockerize -wait unix:///var/lib/nginx/website-ssl.sock
+    fi
+  '
+
 dockerize -wait file:///var/lib/tor/website/hostname \
   sh -c '
     printf "onion service hostname: "

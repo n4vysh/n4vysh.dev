@@ -6,6 +6,8 @@ dev: build
         -e ONION_SERVICE_DOMAIN=127.0.0.1 \
         -e ONION_SERVICE_PKI_VALIDATION_FILE \
         -e ONION_SERVICE_PKI_VALIDATION_CONTENT \
+        -e ONION_SERVICE_SSL_CERTIFICATE \
+        -e ONION_SERVICE_SSL_CERTIFICATE_KEY \
         -t {{ name }}
 
 build:

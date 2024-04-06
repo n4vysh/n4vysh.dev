@@ -5,9 +5,9 @@
 This repository contains the source code of the website to show technical
 skillsets and expertise.
 
-| Clearnet             | Darknet                                                                 |
-| :------------------- | :---------------------------------------------------------------------- |
-| <https://n4vysh.dev> | <http://xdd456duxxh47o3uxu2ql3lj76i6e7paofm7shfts2p6gavqbvngfpqd.onion> |
+| Clearnet             | Darknet                                                                  |
+| :------------------- | :----------------------------------------------------------------------- |
+| <https://n4vysh.dev> | <https://xdd456duxxh47o3uxu2ql3lj76i6e7paofm7shfts2p6gavqbvngfpqd.onion> |
 
 ## Features
 

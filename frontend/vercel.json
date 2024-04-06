@@ -5,7 +5,7 @@
       "headers": [
         {
           "key": "Onion-Location",
-          "value": "http://xdd456duxxh47o3uxu2ql3lj76i6e7paofm7shfts2p6gavqbvngfpqd.onion/"
+          "value": "https://xdd456duxxh47o3uxu2ql3lj76i6e7paofm7shfts2p6gavqbvngfpqd.onion/"
         }
       ]
     },
@@ -14,7 +14,7 @@
       "headers": [
         {
           "key": "Onion-Location",
-          "value": "http://xdd456duxxh47o3uxu2ql3lj76i6e7paofm7shfts2p6gavqbvngfpqd.onion/:path*"
+          "value": "https://xdd456duxxh47o3uxu2ql3lj76i6e7paofm7shfts2p6gavqbvngfpqd.onion/:path*"
         }
       ]
     }

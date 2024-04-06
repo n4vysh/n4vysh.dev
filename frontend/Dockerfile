@@ -39,7 +39,7 @@ RUN touch /var/run/nginx.pid && \
   /var/cache/nginx \
   /var/lib/nginx \
   /var/log/nginx \
-  /etc/nginx/conf.d \
+  /etc/nginx \
   /var/run/nginx.pid && \
   addgroup nginx tty && \
   sed -i -e '/^user  nginx;$/d' /etc/nginx/nginx.conf
@@ -47,6 +47,7 @@ RUN touch /var/run/nginx.pid && \
 COPY ./etc/services.d /etc/services.d
 COPY ./torrc /etc/tor/torrc
 COPY --chown=nginx:nginx ./nginx.tmpl.conf /etc/nginx/default.tmpl.conf
+COPY --chown=nginx:nginx ./nginx-ssl.tmpl.conf /etc/nginx/ssl.tmpl.conf
 COPY --chown=nginx:nginx --from=build-env /home/node/out /var/www/out
 COPY ./scripts/init.sh /init.sh
 

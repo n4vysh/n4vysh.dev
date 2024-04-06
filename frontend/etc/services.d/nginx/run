@@ -7,6 +7,39 @@ with-contenv \
   '${ONION_SERVICE_DOMAIN}' \
   </etc/nginx/default.tmpl.conf \
   >/etc/nginx/conf.d/default.conf
+
+with-contenv \
+  s6-setuidgid nginx \
+  sh -c '
+    if [ -n "$ONION_SERVICE_PKI_VALIDATION_FILE" ] &&
+      [ -n "$ONION_SERVICE_PKI_VALIDATION_CONTENT" ]; then
+      echo "Create directory and file for PKI validation"
+      mkdir -p /var/www/out/.well-known/pki-validation/
+      echo "$ONION_SERVICE_PKI_VALIDATION_CONTENT" \
+        >"/var/www/out/.well-known/pki-validation/$ONION_SERVICE_PKI_VALIDATION_FILE"
+    fi
+  '
+
+with-contenv \
+  s6-setuidgid nginx \
+  sh -c '
+    if [ -n "$ONION_SERVICE_SSL_CERTIFICATE" ] &&
+      [ -n "$ONION_SERVICE_SSL_CERTIFICATE_KEY" ]; then
+      echo "Create SSL certificate"
+      printf "%s" "$ONION_SERVICE_SSL_CERTIFICATE" |
+        base64 -d >/etc/nginx/onion.pem
+      chmod 600 /etc/nginx/onion.pem
+      printf "%s" "$ONION_SERVICE_SSL_CERTIFICATE_KEY" |
+        base64 -d >/etc/nginx/onion.key
+      chmod 600 /etc/nginx/onion.key
+
+      envsubst \
+      "\${ONION_SERVICE_SSL_CERTIFICATE} \${ONION_SERVICE_SSL_CERTIFICATE_KEY}" \
+      </etc/nginx/ssl.tmpl.conf \
+      >/etc/nginx/conf.d/ssl.conf
+    fi
+  '
+
 # NOTE: Use cat command to avoid permission error on fly.io
 # https://community.fly.io/t/container-non-root-user-cant-write-to-dev-stdout-or-dev-stderr/10375/23
 s6-setuidgid nginx /docker-entrypoint.sh sh -c 'nginx -g "daemon off;" 2>&1 | cat'

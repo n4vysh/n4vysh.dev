@@ -4,11 +4,28 @@
 with-contenv \
   s6-setuidgid tor \
   sh -c '
-    [ -n "$ONION_SERVICE_SECRET_KEY" ] &&
+    if [ -n "$ONION_SERVICE_SECRET_KEY" ]; then
+      echo "Create secret key for onion service"
       printf "%s" "$ONION_SERVICE_SECRET_KEY" |
         base64 -d >/var/lib/tor/website/hs_ed25519_secret_key
+    fi
   '
 
 dockerize -wait unix:///var/lib/nginx/website.sock
+
+with-contenv \
+  s6-setuidgid tor \
+  sh -c '
+    if [ -n "$ONION_SERVICE_SSL_CERTIFICATE" ] &&
+      [ -n "$ONION_SERVICE_SSL_CERTIFICATE_KEY" ]; then
+      dockerize -wait unix:///var/lib/nginx/website-ssl.sock
+    fi
+  '
+
+dockerize -wait file:///var/lib/tor/website/hostname \
+  sh -c '
+    printf "onion service hostname: "
+    cat /var/lib/tor/website/hostname
+  ' &
 
 s6-setuidgid tor env HOME=/home/tor/ tor

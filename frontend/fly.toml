@@ -2,11 +2,11 @@ app = "n4vysh-onion-service"
 primary_region = "nrt"
 
 [http_service]
-  force_https = false
-  auto_stop_machines = false
-  auto_start_machines = true
+force_https = false
+auto_stop_machines = false
+auto_start_machines = true
 
 [env]
-  ONION_SERVICE_DOMAIN = "xdd456duxxh47o3uxu2ql3lj76i6e7paofm7shfts2p6gavqbvngfpqd.onion"
-  ONION_SERVICE_PKI_VALIDATION_FILE = "ajc6RbXSzRZ0GkNQHAx"
-  ONION_SERVICE_PKI_VALIDATION_CONTENT = "202404061107bc628899fc7082011208f416ff1758fdd7854c07dd1640f06d9bd0fa300bcd99"
+ONION_SERVICE_DOMAIN = "xdd456duxxh47o3uxu2ql3lj76i6e7paofm7shfts2p6gavqbvngfpqd.onion"
+ONION_SERVICE_PKI_VALIDATION_FILE = "ajc6RbXSzRZ0GkNQHAx"
+ONION_SERVICE_PKI_VALIDATION_CONTENT = "202404061107bc628899fc7082011208f416ff1758fdd7854c07dd1640f06d9bd0fa300bcd99"

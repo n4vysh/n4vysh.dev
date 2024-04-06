@@ -4,6 +4,8 @@ dev: build
     docker run --rm \
         --name n4vysh-onion-service \
         -e ONION_SERVICE_DOMAIN=127.0.0.1 \
+        -e ONION_SERVICE_PKI_VALIDATION_FILE \
+        -e ONION_SERVICE_PKI_VALIDATION_CONTENT \
         -t {{ name }}
 
 build:

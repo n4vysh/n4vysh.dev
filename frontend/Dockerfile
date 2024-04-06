@@ -47,7 +47,7 @@ RUN touch /var/run/nginx.pid && \
 COPY ./etc/services.d /etc/services.d
 COPY ./torrc /etc/tor/torrc
 COPY --chown=nginx:nginx ./nginx.tmpl.conf /etc/nginx/default.tmpl.conf
-COPY --from=build-env /home/node/out /var/www/out
+COPY --chown=nginx:nginx --from=build-env /home/node/out /var/www/out
 COPY ./scripts/init.sh /init.sh
 
 ENTRYPOINT ["/init.sh"]

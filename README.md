@@ -70,7 +70,7 @@ Need Linux (64-bit) machine and following tools.
 | Name                  | Description             | Version     |
 | :-------------------- | :---------------------- | :---------- |
 | [direnv][direnv-link] | Shell extension         | ~> 2.32.3   |
-| [devbox][devbox-link] | Version manager         | ~> 0.8.2    |
+| [devbox][devbox-link] | Version manager         | ~> 0.10.4   |
 | [Docker][docker-link] | Virtualization software | ~> 20.10.14 |
 
 Suggest use Editor or IDE that supports [EditorConfig][editorconfig-link],

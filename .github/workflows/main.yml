@@ -69,15 +69,3 @@ jobs:
     secrets:
       PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
-  passing:
-    if: failure() == false && contains(needs.*.result, 'cancelled') == false
-    runs-on: ubuntu-22.04
-    needs:
-      - install-packages
-      - test
-      - deploy-stg
-      - deploy-prd
-    steps:
-      - run: echo "$json"
-        env:
-          json: ${{ toJSON(needs) }}

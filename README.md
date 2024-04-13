@@ -19,7 +19,6 @@ skillsets and expertise.
 - CIOps with [GitHub Actions][github-actions-link]
 - DevSecOps with [terrascan][terrascan-link], [Trivy][trivy-link] and
   [checkov][checkov-link]
-- Detect Configuration drift with [driftctl][driftctl-link]
 
 [docker-link]: https://www.docker.com/
 [terraform-link]: https://www.terraform.io/
@@ -29,7 +28,6 @@ skillsets and expertise.
 [terrascan-link]: https://runterrascan.io/
 [trivy-link]: https://aquasecurity.github.io/trivy/
 [checkov-link]: https://www.checkov.io/
-[driftctl-link]: https://driftctl.com/
 
 ## Website specifications
 
@@ -70,7 +68,7 @@ Need Linux (64-bit) machine and following tools.
 | Name                  | Description             | Version     |
 | :-------------------- | :---------------------- | :---------- |
 | [direnv][direnv-link] | Shell extension         | ~> 2.32.3   |
-| [devbox][devbox-link] | Version manager         | ~> 0.8.2    |
+| [devbox][devbox-link] | Version manager         | ~> 0.10.4   |
 | [Docker][docker-link] | Virtualization software | ~> 20.10.14 |
 
 Suggest use Editor or IDE that supports [EditorConfig][editorconfig-link],
@@ -97,7 +95,7 @@ Preview and edit the website on local machine as follows:
 1. [Clone this repository on local machine][gh-clone-link]
 1. Go to the project root directory of this repository in terminal
 1. Run [`./scripts/install-packages.bash`][script-link] to install packages via
-   devbox and [rtx][rtx-link]
+   devbox and [mise][mise-link]
 
 frontend - clearnet:
 
@@ -120,7 +118,7 @@ frontend - darknet:
 infra:
 
 Suggest IDE or editor setup with [terraform-ls][terraform-ls-link] and
-[yamllint][yamllint-link] installed by rtx.
+[yamllint][yamllint-link] installed by mise.
 
 ---
 
@@ -134,7 +132,7 @@ Use [Conventional Commits 1.0.0][conventional-commit-link] when create commits.
 [git-install-link]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [gh-clone-link]: https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories
 [script-link]: ./scripts/install-packages.bash
-[rtx-link]: https://github.com/jdxcode/rtx
+[mise-link]: https://github.com/jdx/mise
 [tsserver-link]: https://github.com/typescript-language-server/typescript-language-server
 [eslint-link]: https://eslint.org/
 [pnpm-link]: https://pnpm.io/

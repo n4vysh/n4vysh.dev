@@ -8,8 +8,8 @@ dir=$(
 "$dir/scripts/install/devbox.bash"
 eval "$(devbox shellenv)"
 
-"$dir/scripts/install/rtx-direnv-integration.bash"
-"$dir/scripts/install/rtx-packages.bash" "$dir"
+"$dir/scripts/install/mise-direnv-integration.bash"
+"$dir/scripts/install/mise-packages.bash" "$dir"
 "$dir/scripts/install/direnv-allow.bash" "$dir"
 
 "$dir/scripts/execute-parallel.bash" direnv exec "$dir" <<-EOF

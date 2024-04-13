@@ -1,3 +1,6 @@
 .pnpm-debug.log
 lefthook-local.yml
 frontend/.vscode
+
+# drawio
+.$*.svg.bkp

@@ -9,7 +9,7 @@ skillsets and expertise.
 | :------------------- | :----------------------------------------------------------------------- |
 | <https://n4vysh.dev> | <https://xdd456duxxh47o3uxu2ql3lj76i6e7paofm7shfts2p6gavqbvngfpqd.onion> |
 
-![](./misc/diagram.png)
+![Diagram](./misc/diagram.svg)
 
 ## Features
 

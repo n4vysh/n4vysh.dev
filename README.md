@@ -19,7 +19,6 @@ skillsets and expertise.
 - CIOps with [GitHub Actions][github-actions-link]
 - DevSecOps with [terrascan][terrascan-link], [Trivy][trivy-link] and
   [checkov][checkov-link]
-- Detect Configuration drift with [driftctl][driftctl-link]
 
 [docker-link]: https://www.docker.com/
 [terraform-link]: https://www.terraform.io/
@@ -29,7 +28,6 @@ skillsets and expertise.
 [terrascan-link]: https://runterrascan.io/
 [trivy-link]: https://aquasecurity.github.io/trivy/
 [checkov-link]: https://www.checkov.io/
-[driftctl-link]: https://driftctl.com/
 
 ## Website specifications
 

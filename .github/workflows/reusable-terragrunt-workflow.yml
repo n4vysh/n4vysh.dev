@@ -55,15 +55,6 @@ jobs:
         uses: ./.github/actions/configure-aws-credentials
         with:
           role-to-assume: ${{ inputs.role-to-assume }}
-      - name: Run driftctl
-        # yamllint disable-line rule:line-length
-        if: matrix.dir == 'dns' || matrix.dir == 'iam' || matrix.dir == 'storage'
-        env:
-          ENV: ${{ inputs.environment }}
-        run: |
-          eval "$(direnv export bash)"
-          ./scripts/driftctl.bash ${{ matrix.dir }}
-        working-directory: ./infra/terragrunt/
       - name: Run terragrunt plan
         env:
           ENV: ${{ inputs.environment }}

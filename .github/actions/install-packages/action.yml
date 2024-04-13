@@ -34,9 +34,9 @@ runs:
       with:
         path: |
           ~/.config/direnv/
-          ~/.cache/rtx/
+          ~/.cache/mise/
           ~/.local/share/direnv/allow/
-          ~/.local/share/rtx/
+          ~/.local/share/mise/
           ~/.node/
           ~/.pnpm-store/
           misc/node_modules/

@@ -6,7 +6,8 @@ dir=$(
 )
 
 # https://github.com/conventional-changelog/commitlint/issues/613
+# https://github.com/conventional-changelog/commitlint/issues/3947
 "$dir/misc/node_modules/.bin/commitlint" \
   -g "$dir/.commitlintrc.yaml" \
-  -x "$dir/misc/node_modules/@commitlint/config-conventional" \
+  -x "$dir/misc/node_modules/@commitlint/config-conventional/lib/index.js" \
   "$@"

@@ -5,4 +5,4 @@ dir=$(
   pwd
 )
 
-"$dir/node_modules/.bin/typescript-language-server" "$@"
+exec "$dir/node_modules/.bin/typescript-language-server" "$@"

@@ -24,6 +24,6 @@
   },
   "devDependencies": {
     "typescript-language-server": "^4.3.3",
-    "vercel": "^35.0.0"
+    "vercel": "^36.0.0"
   }
 }

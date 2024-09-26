@@ -23,7 +23,7 @@ name: reusable terragrunt workflow
         description: infracost API key
 jobs:
   set-target-dirs:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     outputs:
       dirs: ${{ steps.output-terragrunt-info.outputs.dirs }}
     steps:
@@ -31,7 +31,7 @@ jobs:
       - id: output-terragrunt-info
         run: .github/scripts/output-terragrunt-info.bash ${{inputs.environment}}
   plan:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     if: needs.set-target-dirs.outputs.dirs != '[]'
     needs:
       - set-target-dirs
@@ -66,7 +66,7 @@ jobs:
           just plan
         working-directory: ./infra/terragrunt/
   apply:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     if: github.ref == 'refs/heads/main'
     needs:
       - set-target-dirs

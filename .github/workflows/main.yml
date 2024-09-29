@@ -41,7 +41,7 @@ jobs:
   deploy-prd:
     if: ${{ needs.changes.outputs.infra == 'true' }}
     # yamllint disable-line rule:line-length
-    uses: n4vysh/n4vysh.dev/.github/workflows/reusable-terragrunt-workflow.yml@main
+    uses: ./.github/workflows/reusable-terragrunt-workflow.yml
     with:
       environment: production
       url: https://n4vysh.dev
@@ -56,7 +56,7 @@ jobs:
   deploy-stg:
     if: ${{ needs.changes.outputs.infra == 'true' }}
     # yamllint disable-line rule:line-length
-    uses: n4vysh/n4vysh.dev/.github/workflows/reusable-terragrunt-workflow.yml@main
+    uses: ./.github/workflows/reusable-terragrunt-workflow.yml
     with:
       environment: staging
       url: https://stg.n4vysh.dev

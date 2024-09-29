@@ -4,6 +4,7 @@ checkov        3.2.24
 conftest       0.30.0
 gopass         1.12.8
 infracost      0.10.30
+sops           3.9.0
 terraform      1.7.4
 terraform-docs 0.17.0
 terraform-ls   0.26.0

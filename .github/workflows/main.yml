@@ -10,7 +10,7 @@ jobs:
       infra: ${{ steps.changed-files-yaml.outputs.infra_any_changed }}
     steps:
       - uses: actions/checkout@v4
-      - uses: tj-actions/changed-files@v45
+      - uses: tj-actions/changed-files@v46
         id: changed-files-yaml
         with:
           files_yaml: |

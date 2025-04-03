@@ -1,0 +1,14 @@
+#!/bin/bash
+
+dir=$(
+  cd "$(dirname "$0")" || exit
+  git rev-parse --show-toplevel
+)
+ENV=$("$dir"/scripts/get-env.bash 2>/dev/null || true)
+
+if [[ $ENV =~ ^(staging|production)$ ]]; then
+  secret="$dir/infra/terragrunt/environments/$ENV/secrets/env.yaml"
+  exec sops exec-env "$secret" "mise exec -- infracost $*"
+else
+  exec mise exec -- infracost "$@"
+fi

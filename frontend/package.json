@@ -10,7 +10,7 @@
     "deploy": "vercel",
     "deploy:prod": "vercel --prod"
   },
-  "packageManager": "pnpm@9.0.4",
+  "packageManager": "pnpm@10.17.1",
   "dependencies": {
     "@types/node": "22.8.6",
     "@types/react": "19.0.1",

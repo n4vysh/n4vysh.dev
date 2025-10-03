@@ -24,7 +24,7 @@ runs:
         echo /opt/direnv/bin >>"$GITHUB_PATH"
         eval "$(direnv export bash)"
       shell: bash
-    - uses: jetpack-io/devbox-install-action@v0.9.0
+    - uses: jetpack-io/devbox-install-action@v0.14.0
       with:
         devbox-version: "0.10.4"
         enable-cache: "true"

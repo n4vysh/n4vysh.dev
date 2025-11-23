@@ -30,6 +30,7 @@ run-all +cmd:
 
 # https://terragrunt.gruntwork.io/docs/features/aws-auth/#aws-iam-policies
 init:
+    AWS_PROFILE=n4vysh/production ./scripts/create-kms-key.bash
     just run-all init --terragrunt-non-interactive
 
 # Creates an execution plan

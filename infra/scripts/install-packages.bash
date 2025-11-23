@@ -8,3 +8,4 @@ cd "$dir" || exit
 
 "$dir/scripts/install/mise-packages.bash" "$dir/infra"
 "$dir/scripts/install/direnv-allow.bash" "$dir/infra"
+"$dir/scripts/install/direnv-allow.bash" "$dir/infra/terragrunt"

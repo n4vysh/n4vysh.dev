@@ -6,3 +6,4 @@ rules:
     present: false
 ignore: |
   **/pnpm-lock.yaml
+  **/secrets/*.yaml

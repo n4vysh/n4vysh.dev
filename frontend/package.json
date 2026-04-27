@@ -20,7 +20,7 @@
     "next": "15.4.7",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "typescript": "5.5.2"
+    "typescript": "6.0.3"
   },
   "devDependencies": {
     "typescript-language-server": "^5.0.0",

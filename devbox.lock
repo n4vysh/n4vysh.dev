@@ -1,51 +1,41 @@
 {
   "lockfile_version": "1",
   "packages": {
-    "mise@2024.3.10": {
-      "last_modified": "2024-04-02T02:53:36Z",
-      "resolved": "github:NixOS/nixpkgs/080a4a27f206d07724b88da096e27ef63401a504#mise",
+    "mise@2026.10.17": {
+      "last_modified": "2026-10-27T21:33:45Z",
+      "resolved": "github:NixOS/nixpkgs/f05535a0efcb2134c478d1e88434fadf486d42b5#mise",
       "source": "devbox-search",
-      "version": "2024.3.10",
+      "version": "2026.10.17",
       "systems": {
         "aarch64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/1393mg89rlbfvnjbl6sbpmsilnm2lk3s-mise-2024.3.10",
+              "path": "/nix/store/fxavcwkbclz36g018j62fhwclva4pxfs-mise-2026.10.17",
               "default": true
             }
           ],
-          "store_path": "/nix/store/1393mg89rlbfvnjbl6sbpmsilnm2lk3s-mise-2024.3.10"
+          "store_path": "/nix/store/fxavcwkbclz36g018j62fhwclva4pxfs-mise-2026.10.17"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/aajdy8il5ff1bhpsp0la81gra35l6l7l-mise-2024.3.10",
+              "path": "/nix/store/f7rkp2zdq40qfgr5j9yq74189karvpb4-mise-2026.10.17",
               "default": true
             }
           ],
-          "store_path": "/nix/store/aajdy8il5ff1bhpsp0la81gra35l6l7l-mise-2024.3.10"
-        },
-        "x86_64-darwin": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/cahjac82qyq1l7y5ps9r4zy35przhhmf-mise-2024.3.10",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/cahjac82qyq1l7y5ps9r4zy35przhhmf-mise-2024.3.10"
+          "store_path": "/nix/store/f7rkp2zdq40qfgr5j9yq74189karvpb4-mise-2026.10.17"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/p99chx3sc72jsjzcgknrxz84qnf8pm2g-mise-2024.3.10",
+              "path": "/nix/store/46rfp2ra3zm87xgpgqvrs424jh7iw5pf-mise-2026.10.17",
               "default": true
             }
           ],
-          "store_path": "/nix/store/p99chx3sc72jsjzcgknrxz84qnf8pm2g-mise-2024.3.10"
+          "store_path": "/nix/store/46rfp2ra3zm87xgpgqvrs424jh7iw5pf-mise-2026.10.17"
         }
       }
     },
